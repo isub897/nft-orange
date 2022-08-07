@@ -1,0 +1,32 @@
+/* Style the navbar */
+.navbar {
+    overflow: hidden;
+    background-color: #fff;
+    padding-right: 20px;
+  }
+  
+/* Navbar links */
+.navbar a {
+    float: right;
+    display: block;
+    color: black;
+    text-align: center;
+    padding: 22px 14px;
+    text-decoration: none;
+    font-weight: 500;
+  }
+
+  /* Change the color of links on hover */
+  .navbar a:hover {
+    transition: 200ms;
+    border-radius: 5px;
+    /* background-color: #FF8E58; */
+    color: #FF5300;
+    cursor: pointer;
+  }
+
+  .navbar img:hover {
+    cursor: pointer;
+    transition: 200ms;
+    box-shadow: 0 0 5px #FF8E58;
+  }
