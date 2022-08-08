@@ -8,6 +8,7 @@ function News() {
         <div className="news ba">
             <h3>These are the latest headlines</h3>
             <Headlines />
+            <h3>These are the other stories</h3>
             <Other />
         </div>
     )

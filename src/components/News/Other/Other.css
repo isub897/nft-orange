@@ -1,3 +1,10 @@
 .other {
+    justify-content: center;
+    text-align: center;
     border-color: green;
+    font-family: Rubik;
+}
+
+.other > .gap {
+    height: 10px;
 }

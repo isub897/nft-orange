@@ -1,5 +1,5 @@
 import React from "react";
-import top from '../Images/Top.png'
+import top from '../../Images/Top.png'
 import './Top.css'
 
 function Top() {

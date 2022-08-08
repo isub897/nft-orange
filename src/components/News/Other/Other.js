@@ -1,10 +1,16 @@
 import React from "react";
+import Story from "./Story/Story";
 import './Other.css'
 
 function Other() {
     return (
         <div className="other ba">
-            These are the other stories section
+            <Story />
+            <div className="gap"></div>
+            <Story />
+            <div className="gap"></div>
+            <Story />
+            <div className="gap"></div>
         </div>
     )
 }
