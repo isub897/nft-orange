@@ -1,0 +1,30 @@
+.top > .info-container > h3 {
+    padding-bottom: 0px;
+    margin: 10px 0px;
+}
+
+.top > .info-container > .about {
+    margin-top: 0px;
+    padding-top: 0px;
+}
+
+.top > .info-container > .about p {
+    font-family: Rubik;
+    font-size: 14px;
+    padding: 0px;
+    margin: 6px 0px;
+}
+
+.top > .info-container > .about > .author-date {
+    display: flex;
+}
+
+.top > .info-container > .about > .author-date > p {
+    padding-right: 15px 
+}
+
+.top > img:hover {
+    cursor: pointer;
+    transition: 200ms;
+    border-radius: 20px;
+}
