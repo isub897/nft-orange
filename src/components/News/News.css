@@ -1,3 +1,10 @@
 .news {
-    background-color: red;
+    width: 100%;
+    display: inline-block;
+}
+
+.news > h3 {
+    justify-content: center;
+    align-items: center;
+    text-align: center;
 }

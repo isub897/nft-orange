@@ -1,0 +1,5 @@
+.headlines {
+    display: flex;
+    border-color: red;
+    justify-content: center;
+}

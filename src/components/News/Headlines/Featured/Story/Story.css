@@ -1,0 +1,36 @@
+.story {
+    display: flex;
+    font-family: Rubik;
+    font-size: 14px;
+}
+
+.story > .info-container {
+    padding: 10px 5px;
+}
+
+.story > .info-container > p {
+    margin: 10px 0 0 0;
+    padding: 0px 10px;
+}
+
+.story > .info-container > p:nth-child(1) {
+    font-weight: 700;
+}
+
+.story > .info-container > p:nth-child(2) {
+    color: #767676;
+}
+
+.story:hover > img {
+    transition: 200ms;
+    border-radius: 0px 20px 0 0px;
+}
+
+.story:hover {
+    cursor: pointer;
+}
+
+.story:hover > .info-container > p:nth-child(1) {
+    transition: 200ms;
+    color: #FF8E58;
+}
