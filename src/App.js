@@ -3,6 +3,7 @@ import Navbar from './components/Navbar/Navbar';
 import News from './components/News/News';
 import Stats from './components/Stats/Stats';
 import About from './components/About/About';
+import Dashboard from './components/Dashboard/Dashboard';
 import './App.css';
 import Signin from './components/Signin/Signin';
 
@@ -14,10 +15,14 @@ class App extends React.Component {
     }
   }
 
+  routeChange = (route) => {
+    this.setState({route: route});
+  }
+
   render() {
     return (
       <div className='App'>
-        <Navbar />
+        <Navbar route={this.state.route} routeChange={this.routeChange} />
         {this.state.route === "news"
           ? <News />
           : (
@@ -26,7 +31,11 @@ class App extends React.Component {
             : (
               this.state.route === "about"
                 ? <About />
-                : <Signin />
+                : (
+                  this.state.route === "signin"
+                    ? <Signin />
+                    : <Dashboard />
+                )
             )
           )
         }

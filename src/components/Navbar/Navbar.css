@@ -19,8 +19,6 @@
   /* Change the color of links on hover */
   .navbar a:hover {
     transition: 200ms;
-    border-radius: 5px;
-    /* background-color: #FF8E58; */
     color: #FF5300;
     cursor: pointer;
   }
@@ -30,3 +28,9 @@
     transition: 200ms;
     box-shadow: 0 0 5px #FF8E58;
   }
+
+  /* Add a color to the active/current link */
+.navbar > .selected {
+  text-decoration:underline;
+  color: #FF1300;
+}
