@@ -2,14 +2,46 @@ import './Navbar.css'
 import logo from './Images/logo.png';
 import React from "react";
 
-function Navbar() {
+const Navbar = ({route, routeChange}) => {
     return (
         <div className="navbar shadow-5">
-            <img alt='logo' src={logo} height='60px' width='auto'/>
-            <a href="#home">About</a>
-            <a href="#home">Stats</a>
-            <a href="#news">News</a>
-            <a href="#contact">Sign In</a>
+            <img onClick={()=> routeChange("dashboard")} alt='logo' src={logo} height='60px' width='auto'/>
+            {route === "about"
+                ? <a 
+                    className='selected'
+                    onClick={()=> routeChange("about")}
+                    href="#about">About</a>
+                : <a 
+                    onClick={()=> routeChange("about")}
+                    href="#about">About</a>
+            }
+            {route === "stats"
+                ? <a 
+                    className='selected'
+                    onClick={()=> routeChange("stats")}
+                    href="#stats">Stats</a>
+                : <a 
+                    onClick={()=> routeChange("stats")}
+                    href="#stats">Stats</a>
+            }
+            {route === "news"
+                ? <a 
+                    className='selected'
+                    onClick={()=> routeChange("news")}
+                    href="#news">News</a>
+                : <a
+                    onClick={()=> routeChange("news")}
+                    href="#news">News</a>
+            }
+            {route === "signin"
+                ? <a 
+                    className='selected'
+                    onClick={()=> routeChange("signin")}
+                    href="#signin">Sign In</a>
+                : <a 
+                    onClick={()=> routeChange("signin")}
+                    href="#signin">Sign In</a>
+            }    
         </div>
     )
 }
