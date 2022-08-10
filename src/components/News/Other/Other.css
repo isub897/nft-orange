@@ -1,10 +1,7 @@
-.other {
+.other {  
+    display: flex;
     justify-content: center;
-    text-align: center;
+    align-items: right;
     border-color: green;
     font-family: Rubik;
-}
-
-.other > .gap {
-    height: 10px;
 }

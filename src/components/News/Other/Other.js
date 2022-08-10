@@ -1,18 +1,16 @@
 import React from "react";
-import Story from "./Story/Story";
 import './Other.css'
+import Storylist from "./Storylist/Storylist";
 
-function Other() {
+function Other({urlDirect, stories}) {
     return (
         <div className="other ba">
-            <Story />
-            <div className="gap"></div>
-            <Story />
-            <div className="gap"></div>
-            <Story />
-            <div className="gap"></div>
+            <Storylist urlDirect={urlDirect} stories={stories} />
         </div>
     )
 }
 
 export default Other;
+
+
+

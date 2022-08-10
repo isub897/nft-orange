@@ -1,0 +1,31 @@
+.story-other {
+    display: flex;
+    justify-content: left;
+}
+
+.story-other > .info-container {
+    width: 600px;
+}
+
+.story-other > .info-container > h3 {
+    margin: 40px 15px 15px;
+}
+
+.story-other > .info-container > p {
+    color: #767676;
+    margin: 0px 15px;
+    text-align: left;
+}
+
+.story-other:hover {
+    cursor: pointer;
+}
+
+.story-other:hover > img {
+    transition: 200ms;
+    border-radius: 0 20px 0 0;
+}
+
+.story-other:hover > .info-container > h3 {
+    color: #FF8E58;
+}
