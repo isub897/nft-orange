@@ -1,0 +1,8 @@
+.storylist {
+    display: inline-block;
+}
+
+
+.storylist > div > .gap {
+    height: 10px;
+}

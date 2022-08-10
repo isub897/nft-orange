@@ -1,19 +1,17 @@
 import React from "react";
+import './Storylist.css'
 import Story from "./Story/Story";
-import './Featured.css'
 
-const Featured = ({urlDirect, featured}) => {
-
+const Storylist = ({urlDirect, stories}) => {
     return (
-        <div className="featured ba">
+        <div className="storylist ba">
             {
-                featured.map((item, index) => {
+                stories.map((item, index)=> {
                     return(
                         <div key={index}>
                             <Story urlDirect={urlDirect} story={item} />
-                            <div className="gap"></div>
+                            <div className="gap"></div> 
                         </div>
-
                     )
                 })
             }
@@ -21,4 +19,6 @@ const Featured = ({urlDirect, featured}) => {
     )
 }
 
-export default Featured;
+export default Storylist;
+
+            
