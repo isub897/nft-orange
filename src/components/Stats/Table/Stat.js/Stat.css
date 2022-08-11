@@ -1,0 +1,25 @@
+.stat-logo {
+    display: flex;
+    align-items: center;
+}
+
+.stat-logo > img {
+    width: 80px;
+    height: 80px;
+    border-radius: 40px;
+}
+
+.stat-logo > p {
+    padding-left: 10px;
+}
+
+.stat-floor {
+    display: flex;
+    align-items: center;
+}
+
+.stat-floor > img {
+    width: 16px;
+    height: 16px;
+    padding-bottom: 2px;
+}
