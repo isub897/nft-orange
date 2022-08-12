@@ -21,4 +21,9 @@ const Floor = ({price}) => {
     )
 }
 
-export default {Logo, Floor}
+const Stat = {
+    Logo,
+    Floor
+};
+
+export default Stat;
