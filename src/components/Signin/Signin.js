@@ -33,17 +33,20 @@ class Signin extends React.Component {
                 notfilled: true
             })
         }
-
-        const request = await fetch('http://localhost:3000/signin', {
-            method: 'POST',
-            headers: {'Content-Type': 'application/json'},
-            body: JSON.stringify({
-                email: this.state.email,
-                password: this.state.password
+        try {
+            const request = await fetch('http://localhost:3000/signin', {
+                method: 'POST',
+                headers: {'Content-Type': 'application/json'},
+                body: JSON.stringify({
+                    email: this.state.email,
+                    password: this.state.password
+                })
             })
-        })
-        const data = await request.json();
-        console.log(data)
+            const data = await request.json();
+            console.log(data)
+        } catch (err) {
+            console.log(err);
+        }
     }
 
     onKeyPress = (event) => {
