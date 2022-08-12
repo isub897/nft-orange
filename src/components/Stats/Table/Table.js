@@ -2,7 +2,7 @@ import React from "react";
 import Stat from './Stat.js/Stat';
 import './Table.css'
 
-const Table = ({stats}) => {
+const Table = ({urlDirect, stats}) => {
 
     return (
         <div className="table">
@@ -20,7 +20,10 @@ const Table = ({stats}) => {
                     // this will remove the 'Ξ' from the floor price string
 
                     return (
-                        <tr id="body" key={index}>
+                        <tr 
+                        onClick={()=> urlDirect(item.collection_url)}
+                        id="body" 
+                        key={index}>
                             <td><Stat.Logo name={item.collection_name} /></td>
                             <td>{item.volume}</td>
                             <td><Stat.Floor price={floor} /></td>

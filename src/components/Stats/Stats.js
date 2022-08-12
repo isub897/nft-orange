@@ -8,12 +8,20 @@ class Stats extends React.Component {
         super();
         this.state = {
             loaded: false,
-            stats: []
+            stats: [],
+            selection: "24 hours"
         }
     }
 
     urlDirect = (route) => {
         window.location = route;
+    }
+
+    onSelectionChange = (selected, name) => {
+        this.setState({
+            stats: selected,
+            selection: name
+        });
     }
     
     getStats = async () => {
@@ -33,10 +41,13 @@ class Stats extends React.Component {
         return (
             <div className="stats ba">
             {this.state.loaded
-                ?<div>
-                    <p>This is the stats section</p>
-                    <Dropdown />
-                    <Table stats={this.state.stats} />
+                ?<div className="stats ba">
+                    <header>
+                        <h1>Top NFT Collections</h1>
+                        <p>The top NFTs collections, ranked by volume, floor price and trade amount</p>
+                    </header>
+                    <Dropdown selection={this.state.selection} onSelectionChange={this.onSelectionChange} />
+                    <Table urlDirect={this.urlDirect} stats={this.state.stats} />
                 </div>
                 :<div></div>
             }
