@@ -6,12 +6,13 @@ import About from './components/About/About';
 import Dashboard from './components/Dashboard/Dashboard';
 import './App.css';
 import Signin from './components/Signin/Signin';
+import Register from './components/Register/Register';
 
 class App extends React.Component {
   constructor() {
     super();
     this.state = {
-      route: "signin"
+      route: "register"
     }
   }
 
@@ -34,7 +35,11 @@ class App extends React.Component {
                 : (
                   this.state.route === "signin"
                     ? <Signin />
-                    : <Dashboard />
+                    : (
+                      this.state.route === "dashboard"
+                        ? <Dashboard />
+                        : <Register routeChange={this.routeChange}/>
+                    )
                 )
             )
           )
