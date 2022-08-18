@@ -74,7 +74,7 @@ class Register extends React.Component {
                     notUnique: true
                 })
             }
-            this.props.routeChange("dashboard");
+            return this.props.routeChange("dashboard");
 
         } catch (err) {
             console.log(err);
@@ -154,19 +154,20 @@ class Register extends React.Component {
                                 )
                             )
                 }
-                <label className="pa0 ma0 lh-copy f6 pointer"><input type="checkbox"/> Remember me</label>
                 </fieldset>
                 <div className="">
                 <input 
                     onClick={this.onSubmit}
                     className="b ph3 pv2 input-reset ba b--black bg-transparent grow pointer f6 dib" 
                     type="button" 
-                    value="Sign in"
+                    value="Register"
                 />
                 </div>
                 <div className="lh-copy mt3">
-                <a href="#0" className="f6 link dim black db">Register</a>
-                <a href="#0" className="f6 link dim black db">Forgot your password?</a>
+                <a 
+                onClick={()=> this.props.routeChange("signin")}
+                href="#0" 
+                className="f6 link dim black db">Go Back</a>
                 </div>
             </main>
             </article>

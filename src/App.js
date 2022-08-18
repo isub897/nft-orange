@@ -12,7 +12,7 @@ class App extends React.Component {
   constructor() {
     super();
     this.state = {
-      route: "register"
+      route: "signin"
     }
   }
 
@@ -34,7 +34,7 @@ class App extends React.Component {
                 ? <About />
                 : (
                   this.state.route === "signin"
-                    ? <Signin />
+                    ? <Signin routeChange={this.routeChange}/>
                     : (
                       this.state.route === "dashboard"
                         ? <Dashboard />

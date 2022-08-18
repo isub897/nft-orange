@@ -7,7 +7,8 @@ class Signin extends React.Component {
         this.state = {
             email: "rent",
             password: "",
-            notfilled: false
+            notfilled: false,
+            wrongCreds: false
         }
     }
 
@@ -43,7 +44,14 @@ class Signin extends React.Component {
                 })
             })
             const data = await request.json();
-            console.log(data)
+            if (data) {
+                return this.props.routeChange("dashboard")
+            } else {
+                return this.setState({
+                    notfilled: false,
+                    wrongCreds: true
+                })
+            }
         } catch (err) {
             console.log(err);
         }
@@ -84,6 +92,17 @@ class Signin extends React.Component {
                         id="password"
                     />
                 </div>
+                {this.state.notfilled
+                    ?<div className="err-msg pb3 f6 red ">
+                        Please ensure all fields are filled
+                    </div>
+                    :(this.state.wrongCreds
+                        ?<div className="err-msg pb3 f6 red ">
+                            Wrong Credentials.  Please try again
+                        </div>
+                        :<div></div>
+                    )
+                }
                 <label className="pa0 ma0 lh-copy f6 pointer"><input type="checkbox"/> Remember me</label>
                 </fieldset>
                 <div className="">
@@ -95,7 +114,10 @@ class Signin extends React.Component {
                 />
                 </div>
                 <div className="lh-copy mt3">
-                <a href="#0" className="f6 link dim black db">Register</a>
+                <a 
+                onClick={()=> this.props.routeChange("register")}
+                href="#0" 
+                className="f6 link dim black db">Register</a>
                 <a href="#0" className="f6 link dim black db">Forgot your password?</a>
                 </div>
             </main>
