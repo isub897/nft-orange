@@ -44,7 +44,9 @@ class Signin extends React.Component {
                 })
             })
             const data = await request.json();
-            if (data) {
+            if (data.email) {
+                this.props.signinChange(true);
+                this.props.loadUser(data)
                 return this.props.routeChange("dashboard")
             } else {
                 return this.setState({

@@ -2,10 +2,11 @@ import './Navbar.css'
 import logo from './Images/logo.png';
 import React from "react";
 
-const Navbar = ({route, routeChange}) => {
+const Navbar = ({user, signedin, route, routeChange}) => {
     return (
         <div className="navbar shadow-5">
             <img onClick={()=> routeChange("dashboard")} alt='logo' src={logo} height='60px' width='auto'/>
+
             {route === "about"
                 ? <a 
                     className='selected'
@@ -33,7 +34,17 @@ const Navbar = ({route, routeChange}) => {
                     onClick={()=> routeChange("news")}
                     href="#news">News</a>
             }
-            {route === "signin"
+            {signedin
+                ?(route === "dashboard"
+                ? <a 
+                    className='selected'
+                    onClick={()=> routeChange("dashboard")}
+                    href="#dashboard">{user}</a>
+                : <a 
+                    onClick={()=> routeChange("dashboard")}
+                    href="#dashboard">{user}</a>
+                )
+                :(route === "signin"
                 ? <a 
                     className='selected'
                     onClick={()=> routeChange("signin")}
@@ -41,7 +52,17 @@ const Navbar = ({route, routeChange}) => {
                 : <a 
                     onClick={()=> routeChange("signin")}
                     href="#signin">Sign In</a>
-            }    
+                )
+            }
+            {/* {route === "signin"
+                ? <a 
+                    className='selected'
+                    onClick={()=> routeChange("signin")}
+                    href="#signin">Sign In</a>
+                : <a 
+                    onClick={()=> routeChange("signin")}
+                    href="#signin">Sign In</a>
+            }     */}
         </div>
     )
 }
