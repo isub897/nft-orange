@@ -32,6 +32,24 @@ class App extends React.Component {
     this.setState({signedin: logic})
   }
 
+  async componentDidMount() {
+    try {
+    const sessionCall = await fetch('http://localhost:3000/session', {
+      credentials: 'include'
+    });
+    const user = await sessionCall.json();
+    if (user.email) {
+      return this.setState({
+        user: user,
+        signedin: true
+      })
+    }
+    } catch(err) {
+
+    }
+
+  }
+
   render() {
     return (
       <div className='App'>

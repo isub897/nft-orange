@@ -5,9 +5,14 @@ import "./Dashboard.css";
 
 const Dashboard = ({signinChange, routeChange, user}) => {
 
-    const stateReset = () => {
+    const stateReset = async () => {
         routeChange("signin");
         signinChange(false);
+        const response = await fetch('http://localhost:3000/logout', {
+            credentials: 'include'
+        });
+        const data = await response.json();
+        console.log(data);
     }
 
     return (

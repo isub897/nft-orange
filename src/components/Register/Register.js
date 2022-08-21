@@ -64,7 +64,8 @@ class Register extends React.Component {
                     email: this.state.email,
                     password: this.state.password,
                     confirm: this.state.confirm
-                })
+                }),
+                credentials: 'include'
             })
             const data = await request.json();
             if (data === "taken") {
