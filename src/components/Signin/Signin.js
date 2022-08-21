@@ -41,7 +41,8 @@ class Signin extends React.Component {
                 body: JSON.stringify({
                     email: this.state.email,
                     password: this.state.password
-                })
+                }),
+                credentials: 'include'
             })
             const data = await request.json();
             if (data.email) {
