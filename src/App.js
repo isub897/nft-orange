@@ -12,18 +12,30 @@ class App extends React.Component {
   constructor() {
     super();
     this.state = {
-      route: "signin"
+      route: "news",
+      user: {},
+      signedin: false
     }
+  }
+
+  loadUser = (input) => {
+    this.setState({
+      user: input
+    })
   }
 
   routeChange = (route) => {
     this.setState({route: route});
   }
 
+  signinChange = (logic) => {
+    this.setState({signedin: logic})
+  }
+
   render() {
     return (
       <div className='App'>
-        <Navbar route={this.state.route} routeChange={this.routeChange} />
+        <Navbar user={this.state.user.username} signedin={this.state.signedin} route={this.state.route} routeChange={this.routeChange} />
         {this.state.route === "news"
           ? <News />
           : (
@@ -34,11 +46,11 @@ class App extends React.Component {
                 ? <About />
                 : (
                   this.state.route === "signin"
-                    ? <Signin routeChange={this.routeChange}/>
+                    ? <Signin signinChange={this.signinChange} loadUser={this.loadUser} routeChange={this.routeChange}/>
                     : (
                       this.state.route === "dashboard"
-                        ? <Dashboard />
-                        : <Register routeChange={this.routeChange}/>
+                        ? <Dashboard signinChange={this.signinChange} routeChange={this.routeChange} user={this.state.user} />
+                        : <Register loadUser={this.loadUser} routeChange={this.routeChange}/>
                     )
                 )
             )

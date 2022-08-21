@@ -74,7 +74,8 @@ class Register extends React.Component {
                     notUnique: true
                 })
             }
-            return this.props.routeChange("dashboard");
+            this.props.loadUser(data)
+            return this.props.routeChange("dashboard")
 
         } catch (err) {
             console.log(err);
