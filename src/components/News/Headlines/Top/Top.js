@@ -7,7 +7,7 @@ const Top = ({urlDirect, top}) => {
         <div
         onClick={()=> urlDirect(top.url)} 
         className="top">
-            <img src={top.img} alt='top' height='340px' width='525px' />
+            <img src={top.img} alt='top' />
             <div className="info-container">
                 <h3>{top.title}</h3>
                 <p>{top.source}</p>

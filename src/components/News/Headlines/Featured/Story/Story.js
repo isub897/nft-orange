@@ -6,7 +6,7 @@ const Story = ({urlDirect, story}) => {
         <div
         onClick={()=> urlDirect(story.url)} 
         className="story">
-            <img src={story.img} alt='story' height='138px' width='185px' />
+            <img src={story.img} alt='story' />
             <div className="info-container">
                 <p>{story.title}</p>
                 <p>{story.source}</p>

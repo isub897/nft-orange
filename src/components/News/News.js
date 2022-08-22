@@ -33,11 +33,15 @@ class News extends React.Component {
 
     render() {
         return ( 
-            <div className="news ba">
+            <div >
                 {this.state.loaded
-                    ?<div>
-                        <h3>These are the headlines</h3>
-                        <Headlines urlDirect={this.urlDirect} stories={this.state.headlines} />
+                    ?<div className="news">
+                        {this.props.signedin
+                            ?<h1>{`Hi ${this.props.username}!`}</h1>
+                            :<div></div>
+                        }
+                        <h3>{`These are your headlines for today`}</h3>
+                        <Headlines username={this.props.username} signedin={this.props.signedin} urlDirect={this.urlDirect} stories={this.state.headlines} />
                         <h3>These are the other stories</h3>
                         <Other urlDirect={this.urlDirect} stories={this.state.others} />
                     </div>

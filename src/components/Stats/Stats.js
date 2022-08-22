@@ -39,9 +39,9 @@ class Stats extends React.Component {
 
     render() {
         return (
-            <div className="stats ba">
+            <div>
             {this.state.loaded
-                ?<div className="stats ba">
+                ?<div className="stats">
                     <header>
                         <h1>Top NFT Collections</h1>
                         <p>The top NFTs collections, ranked by volume, floor price and trade amount</p>

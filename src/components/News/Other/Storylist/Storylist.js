@@ -4,7 +4,7 @@ import Story from "./Story/Story";
 
 const Storylist = ({urlDirect, stories}) => {
     return (
-        <div className="storylist ba">
+        <div className="storylist">
             {
                 stories.map((item, index)=> {
                     return(

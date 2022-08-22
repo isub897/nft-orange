@@ -5,7 +5,11 @@ import React from "react";
 const Navbar = ({user, signedin, route, routeChange}) => {
     return (
         <div className="navbar shadow-5">
-            <img onClick={()=> routeChange("dashboard")} alt='logo' src={logo} height='60px' width='auto'/>
+            {signedin
+                ?<img onClick={()=> routeChange("dashboard")} alt='logo' src={logo} height='60px' width='auto'/>
+                :<img onClick={()=> routeChange("news")} alt='logo' src={logo} height='60px' width='auto'/>
+            }
+            
 
             {route === "about"
                 ? <a 

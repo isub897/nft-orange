@@ -5,7 +5,7 @@ import './Featured.css'
 const Featured = ({urlDirect, featured}) => {
 
     return (
-        <div className="featured ba">
+        <div className="featured">
             {
                 featured.map((item, index) => {
                     return(

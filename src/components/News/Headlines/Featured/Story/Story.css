@@ -4,6 +4,11 @@
     font-size: 14px;
 }
 
+.story > img {
+    height: 138px;
+    width: 185px;
+}
+
 .story > .info-container {
     padding: 10px 5px;
 }
@@ -33,4 +38,30 @@
 .story:hover > .info-container > p:nth-child(1) {
     transition: 200ms;
     color: #FF8E58;
+}
+
+/* MEDIA QUERIES -------------------------------------------------------------- */
+@media (max-width: 1200px) {
+    .story > img {
+        height: 104px;
+        width: 139px;
+    }
+}
+
+
+@media (max-width: 300px) {
+    .story {
+        display: inline-block;
+        padding: 0px;
+    }
+
+    .story > .info-container {
+        padding: 0px;
+    }
+
+    .story > .info-container p {
+        padding: 0px;
+        padding-left: 0px;
+        margin-left: 0px;
+    }
 }

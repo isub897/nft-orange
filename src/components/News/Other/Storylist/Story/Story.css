@@ -29,3 +29,36 @@
 .story-other:hover > .info-container > h3 {
     color: #FF8E58;
 }
+
+/* MEDIA QUERIES -------------------------------------------------------------- */
+@media (max-width: 300px) {
+    .story-other {
+        display: inline-block;
+        padding: 0px;
+    }
+
+    .story-other > .info-container {
+        padding: 0px;
+        width: 100%;
+    }
+
+    .story-other > .info-container h3 {
+        margin-left: 5px;
+    }
+
+    .story-other > .info-container > p {
+        margin-left: 5px;
+    }
+}
+
+@media (max-width: 576px) {
+    .story-other > .info-container h3, p {
+        padding: 0px;
+        margin-top: 10px;
+        font-size: 14px;
+    }
+
+    .story-other > .info-container {
+        padding: 0px;
+    }
+}
