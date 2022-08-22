@@ -23,3 +23,22 @@
     height: 16px;
     padding-bottom: 2px;
 }
+
+@media (max-width: 576px) {
+    .stat-logo > img {
+        width: 40px;
+        height: 40px;
+        border-radius: 20px;
+    }
+
+    .stat-logo > p {
+        padding-top: 0px;
+        font-size: 14px;
+    }
+}
+
+@media (max-width: 300px) {
+    .stat-logo > p {
+        font-size: 12px
+    }
+}

@@ -4,7 +4,7 @@ import Storylist from "./Storylist/Storylist";
 
 function Other({urlDirect, stories}) {
     return (
-        <div className="other ba">
+        <div className="other">
             <Storylist urlDirect={urlDirect} stories={stories} />
         </div>
     )

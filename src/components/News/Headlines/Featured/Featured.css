@@ -1,7 +1,28 @@
 .featured {
+    width: 40%;
     padding: 0px 10px
 }
 
 .featured > div > .gap {
     height: 10px;
+}
+
+/* MEDIA QUERIES -------------------------------------------------------------- */
+@media (max-width: 1200px) {
+    .featured {
+        width: 45%
+    }
+}
+
+@media (max-width: 768px) {
+    .featured {
+        width: 100%;
+    }
+
+}
+
+@media (max-width: 576px) {
+    .featured {
+        width: 100%;
+    }
 }

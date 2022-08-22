@@ -6,7 +6,7 @@ import './Headlines.css'
 const Headlines = ({urlDirect, stories}) => {
     // const date = new Date();
     return (
-        <div className="headlines ba">
+        <div className="headlines">
             <Top urlDirect={urlDirect} top={stories[0]} />
             <Featured urlDirect={urlDirect} featured={stories.slice(1,4)} />
         </div>

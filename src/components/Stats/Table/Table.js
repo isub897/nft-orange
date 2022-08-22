@@ -9,10 +9,10 @@ const Table = ({urlDirect, stats}) => {
             <table>
             <tbody>
             <tr id="head" >
-                <th className="left-most">Collection</th>
+                <th>Collection</th>
                 <th>Volume</th>
                 <th>Floor Price</th>
-                <th className="right-most">Number of Trades</th>
+                <th>Number of Trades</th>
             </tr>
             {
                 stats.map((item, index)=> {

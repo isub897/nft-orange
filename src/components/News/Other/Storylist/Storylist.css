@@ -6,3 +6,10 @@
 .storylist > div > .gap {
     height: 10px;
 }
+
+/* MEDIA QUERIES -------------------------------------------------------------- */
+@media (max-width: 576px) {
+    .storylist {
+        width: 100%;
+    }
+}

@@ -1,3 +1,12 @@
+.top {
+    width: 40%;
+}
+
+.top > img {
+    height: 340px;
+    width: 525px;
+}
+
 .top:hover {
     cursor: pointer;
 }
@@ -6,6 +15,7 @@
     transition: 200ms;
     border-radius: 20px;
     box-shadow: 0 0px 20px #FF8E58;
+
 }
 
 .top:hover > .info-container > h3 {
@@ -29,5 +39,41 @@
     font-size: 14px;
     padding: 0px;
     margin: 6px 0px;
+}
+
+/* MEDIA QUERIES -------------------------------------------------------------- */
+@media (max-width: 1200px) {
+    .top {
+        width: 49%
+    }
+
+    .top > img {
+        height: 255px;
+        width: 394px;
+    }
+}
+
+@media (max-width: 768px) {
+    .top {
+        width: 100%;
+    }
+
+    .top > img {
+        height: 340px;
+        width: 525px;
+    }
+
+}
+
+@media (max-width: 576px) {
+    .top {
+        width: 100%;
+        padding-bottom: 10px;
+    }
+
+    .top > .info-container {
+        padding-left: 10px;
+        padding-right: 10px;
+    }
 }
 

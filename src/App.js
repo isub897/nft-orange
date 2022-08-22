@@ -51,23 +51,24 @@ class App extends React.Component {
   }
 
   render() {
+    const { signedin, user, route } = this.state;
     return (
       <div className='App'>
-        <Navbar user={this.state.user.username} signedin={this.state.signedin} route={this.state.route} routeChange={this.routeChange} />
-        {this.state.route === "news"
-          ? <News />
+        <Navbar user={user.username} signedin={signedin} route={route} routeChange={this.routeChange} />
+        {route === "news"
+          ? <News signedin={signedin} username={user.username} />
           : (
-            this.state.route === "stats"
+            route === "stats"
             ? <Stats />
             : (
-              this.state.route === "about"
+              route === "about"
                 ? <About />
                 : (
-                  this.state.route === "signin"
+                  route === "signin"
                     ? <Signin signinChange={this.signinChange} loadUser={this.loadUser} routeChange={this.routeChange}/>
                     : (
-                      this.state.route === "dashboard"
-                        ? <Dashboard signinChange={this.signinChange} routeChange={this.routeChange} user={this.state.user} />
+                      route === "dashboard"
+                        ? <Dashboard signinChange={this.signinChange} routeChange={this.routeChange} user={user} />
                         : <Register loadUser={this.loadUser} routeChange={this.routeChange}/>
                     )
                 )

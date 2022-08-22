@@ -1,10 +1,21 @@
 .news {
     width: 100%;
     display: inline-block;
+    justify-content: center;
 }
 
-.news > h3 {
+.news > h3, h1 {
     justify-content: center;
     align-items: center;
     text-align: center;
+}
+
+.news > h1 {
+    margin-bottom: 0px;
+    padding-bottom: 0px;
+}
+
+.news > h3 {
+    padding-bottom: 20px;
+    padding-top: 10px;
 }
